@@ -14,7 +14,7 @@ li{
 	height: 48px;
 	line-height: 50px;
 	border-bottom: 2px solid #ffffff;
-	transition:all 1s ease;
+	transition:all 0.2s ease-in;
 }
 .current-page{
 	border-bottom: 2px solid #dc4437;
@@ -34,8 +34,10 @@ li:hover{
 	color: #ffffff;
 	cursor: pointer;
 }
-body{background: #dc4437;
-font-family: "Sawasdee";}
+	body{background: #dc4437;
+	font-family: "Sawasdee";
+	transition:background 0.2s ease-in;
+}
 #logo{
 	color: #dc4437;
 	background: #ffffff;
@@ -49,5 +51,6 @@ font-family: "Sawasdee";}
 #logo h2{
 	position: absolute;
 	top: 15px;
+	transition:color 0.2s ease-in;
 }
 

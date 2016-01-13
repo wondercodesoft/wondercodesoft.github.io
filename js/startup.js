@@ -1,23 +1,50 @@
+var h=false;
 var colors=['#dc4437','#549b20','#38cedc','#9738dc'];
 var last;
+var currentColor= '#dc4437';
+var currentIndex='0';
 window.onload=function(){
 	last=document.querySelector('.current-page');
 	var menuItems=document.querySelectorAll('#header ul li');
 	var l=menuItems.length;
 	for(var i=0;i<l;i++){
 		menuItems[i].addEventListener('click',click);
+		menuItems[i].addEventListener('mouseenter',hover);
+		menuItems[i].addEventListener('mouseleave',leave);
 	}
 };
 function click(evt){
 	var target=evt.currentTarget;
 	var index=target.getAttribute('index');
-	var styleSheet=document.styleSheets[0];
-	document.body.style.background=colors[index];
+	currentColor=colors[index];
+	if (h){
+		target.style.background=currentColor;
+	}
+	document.body.style.background=currentColor;
 	var logo=document.querySelector('#logo h2');
-	logo.style.color=colors[index];
+	logo.style.color=currentColor;
 	last.classList.remove('current-page');
-	last.style.borderBottom="2px solid #fff";
 	target.classList.add('current-page');
-	target.style.borderBottom="2px solid "+colors[index];
-	last=target;		
+	var menuItems=document.querySelectorAll('#header ul li');var l=menuItems.length;
+	for(var i=0;i<l;i++){
+		menuItems[i].style.borderBottom='2px solid #ffffff';
+	}
+	target.style.borderBottom="2px solid "+currentColor;
+	last=target;
+	currentIndex=index;	
+};
+function hover(evt){
+	var target=evt.currentTarget;
+	target.style.background=currentColor;
+	target.style.borderBottom='2px solid '+currentColor;
+	h=true; 
+};
+function leave(evt){
+	h=false;
+	var target=evt.currentTarget;
+	var index=target.getAttribute('index');
+	target.style.background='#ffffff';
+	if(currentIndex!==index){
+		target.style.borderBottom='2px solid #ffffff';
+	}	
 };
