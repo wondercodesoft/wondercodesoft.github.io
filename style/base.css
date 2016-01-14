@@ -14,10 +14,10 @@ li{
 	height: 48px;
 	line-height: 50px;
 	border-bottom: 2px solid #ffffff;
-	transition:all 0.2s ease-in;
+	transition:all 0.3s ease-in;
 }
 .current-page{
-	border-bottom: 2px solid #dc4437;
+	border-bottom: 2px solid #e06f60;
 }
 #header{
 	position: absolute;
@@ -29,17 +29,17 @@ li{
 	padding: 0px;
 }
 li:hover{
-	background: #dc4437;
-	border-bottom: 2px solid #dc4437;
+	background: #e06f60;
+	border-bottom: 2px solid #e06f60;
 	color: #ffffff;
 	cursor: pointer;
 }
-	body{background: #dc4437;
+	body{background: #e06f60;
 	font-family: "Sawasdee";
-	transition:background 0.2s ease-in;
+	transition:background 0.3s ease-in;
 }
 #logo{
-	color: #dc4437;
+	color: #e06f60;
 	background: #ffffff;
 	position: relative;
 	width: 150px;
@@ -51,6 +51,35 @@ li:hover{
 #logo h2{
 	position: absolute;
 	top: 15px;
-	transition:color 0.2s ease-in;
+	transition:color 0.3s ease-in;
+}
+#body {
+	position:absolute;
+	top:50px;
+	background: #ffffff;
+	width: 100%;
+	height: auto;
+	left: 0%;
+	margin: 0px;
+	padding: 0px;
+}
+#home {
+	position: relative;
+	top: -20px;
+	width: 100%;
+	height: 585px;
+}
+#slide1 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding:0px;
+}
+#slide1 h1 {
+	position: relative;
+	top: 250px;
+	text-align: center;
+	font-size: 5rem;
 }
 

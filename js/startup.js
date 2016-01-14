@@ -1,7 +1,7 @@
 var h=false;
-var colors=['#dc4437','#549b20','#38cedc','#9738dc'];
+var colors=['#e06f60','#35a942','#309397','#783766'];
 var last;
-var currentColor= '#dc4437';
+var currentColor= '#e06f60';
 var currentIndex='0';
 window.onload=function(){
 	last=document.querySelector('.current-page');
