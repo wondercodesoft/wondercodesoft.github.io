@@ -34,9 +34,8 @@ li:hover{
 	color: #ffffff;
 	cursor: pointer;
 }
-	body{background: #e06f60;
+	body{
 	font-family: "Sawasdee";
-	transition:background 0.3s ease-in;
 }
 #logo{
 	color: #e06f60;
@@ -52,34 +51,124 @@ li:hover{
 	position: absolute;
 	top: 15px;
 	transition:color 0.3s ease-in;
+	cursor: default;
 }
 #body {
 	position:absolute;
 	top:50px;
-	background: #ffffff;
 	width: 100%;
-	height: auto;
+	height:100%;
 	left: 0%;
 	margin: 0px;
 	padding: 0px;
+	overflow: hidden;
+	transition:background 0.3s ease-in;
 }
 #home {
-	position: relative;
-	top: -20px;
+	position: absolute;
+	top: 0px;
 	width: 100%;
 	height: 585px;
+	overflow: hidden;
+	background: #ffffff
 }
 #slide1 {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	margin: 0px;
 	padding:0px;
+	left:0%;
+	transition:left 0.5s ease-in;
 }
 #slide1 h1 {
 	position: relative;
-	top: 250px;
+	top: 210px;
 	text-align: center;
 	font-size: 5rem;
 }
-
+#slide2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	left: 100%;
+	transition:left 0.5s ease-in;
+}
+#slide2 h2 {
+	position: relative;	
+	top: 210px;
+	text-align: center;
+	font-size: 3rem;
+}
+#slide3 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	left: 100%;
+	transition:left 0.5s ease-in;
+}
+#slide3 h2{
+	position: relative;
+	top: 210px;
+	text-align: center;
+	font-size: 3rem;
+}
+#slide4 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	left: 100%;
+	transition:left 0.5s ease-in;
+}
+#slide4 h2 {
+	position: relative;
+	top: 210px;
+	text-align: center;
+	font-size: 3rem;
+}
+@keyframes hideLeft{
+	from{left:0%;}
+	to {left: -100%;}
+}
+@keyframes showLeft{
+	from{left:100%;}
+	to{left: 0%;}
+}
+@keyframes hideRight{
+	from{left:0%;}
+	to {left: 100%;}
+}
+@keyframes showRight{
+	from{left: -100%;}
+	to{left:0%;}
+}
+#view-works {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 585px;
+	opacity:0;
+	background: #fff;
+}
+#skills {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 585px;
+	opacity:0;
+	background: #fff;
+}
+#opinions {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 585px;
+	opacity:0;
+	background: #fff;
+}
